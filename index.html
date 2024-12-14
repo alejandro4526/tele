@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlar LED</title>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script type="module" src="mqtt.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://electronicaonline.net/wp-content/uploads/2023/06/Telecomunicaciones.webp'); /* Cambia la URL por tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif; /* Cambia por otra fuente si prefieres */
+        }
+        #container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif; /* Fuente elegante */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Controlar LED con MQTT</h1>
+        <button id="ledButton" onclick="toggleLED()">Encender LED</button>
+    </div>
+</body>
+</html>
